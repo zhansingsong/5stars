@@ -22,3 +22,7 @@ npx 5stars -a https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/
 
 ![](./medias/click-mode-emoji.gif)
 
+
+[DOME Page]()
+
+[------> More about 5stars ----->](https://github.com/zhansingsong/5stars)
