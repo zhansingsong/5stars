@@ -11,7 +11,7 @@ npx 5stars -a https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/
 ```
 [output-emoji.svg](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji.svg)
 
-![](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji.svg)
+![](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji.png)
 
 - **`click` mode**
 
