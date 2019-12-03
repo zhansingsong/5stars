@@ -9,18 +9,18 @@
 ```bash
 npx 5stars -a https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/emoji-a.svg -b https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/emoji-b.svg -o output-emoji.svg -s 20
 ```
-[output-emoji.svg](./medias/output-emoji.svg)
+[output-emoji.svg](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji.svg)
 
-![](./medias/output-emoji.svg)
+![](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji.svg)
 
 - **`click` mode**
 
 ```bash
 npx 5stars -a https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/emoji-a.svg -b https://raw.githubusercontent.com/zhansingsong/5stars/master/svgs/emoji-b.svg -o output-emoji-click.svg -m click -s 20
 ```
-[output-emoji-click.svg](./medias/output-emoji-click.svg)
+[output-emoji-click.svg](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/output-emoji-click.svg)
 
-![](./medias/click-mode-emoji.gif)
+![](https://raw.githubusercontent.com/zhansingsong/5stars/master/medias/click-mode-emoji.gif)
 
 
 [DOME Page]()
