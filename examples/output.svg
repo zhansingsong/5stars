@@ -1,0 +1,53 @@
+
+<svg class="5stars-svg" id="5stars-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-width="0.5" width="100%" height="100%"
+viewBox="0 0 269.335 53.867">
+  <!-- Generator: 5stars. https://github.com/zhansingsong/5stars -->
+  <defs>
+    <clipPath id="5stars-clip">
+    <rect x="0" y="0" width="0" height="53.867" fill="#000" id="5stars-rect"/>
+    </clipPath>
+  </defs>
+  <symbol viewbox="0 0 53.867 53.867" id="star-a"><path fill="#ddd" d="M26.934 1.318l8.322 16.864 18.611 2.705L40.4 34.013l3.179 18.536-16.645-8.751-16.646 8.751 3.179-18.536L0 20.887l18.611-2.705z"></path></symbol>
+  <symbol viewbox="0 0 53.867 53.867" id="star-b"><path fill="#ffad54" d="M26.934 1.318l8.322 16.864 18.611 2.705L40.4 34.013l3.179 18.536-16.645-8.751-16.646 8.751 3.179-18.536L0 20.887l18.611-2.705z"></path></symbol>
+  <g>
+    <use  xlink:href="#star-a" x="0" y="0" width="53.867" /><use  xlink:href="#star-a" x="53.867" y="0" width="53.867" /><use  xlink:href="#star-a" x="107.734" y="0" width="53.867" /><use  xlink:href="#star-a" x="161.601" y="0" width="53.867" /><use  xlink:href="#star-a" x="215.468" y="0" width="53.867" />
+  </g>
+  <g clip-path="url(#5stars-clip)">
+    <use  xlink:href="#star-b" x="0" y="0" width="53.867" /><use  xlink:href="#star-b" x="53.867" y="0" width="53.867" /><use  xlink:href="#star-b" x="107.734" y="0" width="53.867" /><use  xlink:href="#star-b" x="161.601" y="0" width="53.867" /><use  xlink:href="#star-b" x="215.468" y="0" width="53.867" />
+  </g>
+  <script>
+    <![CDATA[
+      
+        var mapToSvgRealWidthPercent = function (percent) {
+          var realWidth = 269.335;
+          var totalWidth = 269.335;
+          if(realWidth === totalWidth){
+            return percent;
+          }
+          var width = 53.867;
+          var space = 0;
+          var realWidthValue = realWidth * percent;
+          var index = Math.ceil( realWidthValue / width);
+          var valueWidth = realWidthValue + space * (index - 1);
+          return valueWidth / totalWidth;
+        }
+      
+      var svg = document.getElementById('5stars-svg');
+      var rect = document.getElementById('5stars-rect');
+      var percent = svg.getAttribute('data-width');
+      
+      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+      if(MutationObserver) {
+        var observer = new MutationObserver(function(mutations) {
+          rect.style.width = mapToSvgRealWidthPercent(svg.dataset.width) * 100 + '%';
+        });
+        observer.observe(svg, {
+          attributes: true,
+          attributeOldValue: true,
+        });
+      }
+      
+      rect.style.width = mapToSvgRealWidthPercent(percent) * 100 + '%';
+    ]]>
+  </script>
+</svg>

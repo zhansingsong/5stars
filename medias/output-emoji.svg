@@ -1,0 +1,53 @@
+
+<svg class="5stars-svg" id="5stars-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-width="0.5" width="100%" height="100%"
+viewBox="0 0 2640 512">
+  <!-- Generator: 5stars. https://github.com/zhansingsong/5stars -->
+  <defs>
+    <clipPath id="5stars-clip">
+    <rect x="0" y="0" width="0" height="512" fill="#000" style="width: 50%" id="5stars-rect"/>
+    </clipPath>
+  </defs>
+  <symbol viewbox="0 0 512 512" id="star-a"><circle cx="256" cy="256" r="256" fill="#d7d7d7"></circle><path fill="#c6c6c6" d="M512 256c0 141.44-114.64 256-256 256-80.48 0-152.32-37.12-199.28-95.28 43.92 35.52 99.84 56.72 160.72 56.72 141.36 0 256-114.56 256-256 0-60.88-21.2-116.8-56.72-160.72C474.8 103.68 512 175.52 512 256z"></path><g fill="#424242"><path d="M370.56 344.4c0 7.696-6.224 13.92-13.92 13.92H155.344c-7.616 0-13.92-6.224-13.92-13.92s6.304-13.92 13.92-13.92H356.64c7.712.016 13.92 6.224 13.92 13.92z"></path><circle cx="174.512" cy="207.088" r="38.144"></circle></g><ellipse cx="190.667" cy="191.518" fill="#5e5e5e" rx="10.016" ry="6.48" transform="scale(-1) rotate(53.347 381.215 -379.522)"></ellipse><circle cx="337.44" cy="207.088" r="38.144" fill="#424242"></circle><ellipse cx="353.586" cy="191.533" fill="#5e5e5e" rx="10.016" ry="6.48" transform="scale(-1) rotate(53.343 381.305 -703.919)"></ellipse></symbol>
+  <symbol viewbox="0 0 512 512" id="star-b"><circle cx="256" cy="256" r="256" fill="#ffd93b"></circle><path fill="#3e4347" d="M256 424.56c-68.768 0-129.2-44.064-150.368-109.648-2.032-6.304 1.424-13.072 7.728-15.104a11.974 11.974 0 0115.104 7.728C146.432 363.168 197.68 400.56 256 400.56s109.568-37.376 127.536-93.024a11.974 11.974 0 0115.104-7.728c6.304 2.032 9.76 8.8 7.728 15.104C385.2 380.496 324.768 424.56 256 424.56z"></path><path fill="#f4c534" d="M512 256c0 141.44-114.64 256-256 256-80.48 0-152.32-37.12-199.28-95.28 43.92 35.52 99.84 56.72 160.72 56.72 141.36 0 256-114.56 256-256 0-60.88-21.2-116.8-56.72-160.72C474.8 103.68 512 175.52 512 256z"></path><g fill="#3e4347"><path d="M213.44 214.176c-12.032-16.416-33.728-27.328-58.464-27.328-24.848.112-46.544 11.024-58.576 27.44.56-31.824 26.544-57.456 58.576-57.456 31.808 0 57.904 25.52 58.464 57.344zM415.616 214.176c-12.032-16.416-33.728-27.328-58.464-27.328-24.848.112-46.544 11.024-58.576 27.44.56-31.824 26.544-57.456 58.576-57.456 31.824 0 57.904 25.52 58.464 57.344z"></path></g></symbol>
+  <g>
+    <use  xlink:href="#star-a" x="0" y="0" width="512" /><use  xlink:href="#star-a" x="532" y="0" width="512" /><use  xlink:href="#star-a" x="1064" y="0" width="512" /><use  xlink:href="#star-a" x="1596" y="0" width="512" /><use  xlink:href="#star-a" x="2128" y="0" width="512" />
+  </g>
+  <g clip-path="url(#5stars-clip)">
+    <use  xlink:href="#star-b" x="0" y="0" width="512" /><use  xlink:href="#star-b" x="532" y="0" width="512" /><use  xlink:href="#star-b" x="1064" y="0" width="512" /><use  xlink:href="#star-b" x="1596" y="0" width="512" /><use  xlink:href="#star-b" x="2128" y="0" width="512" />
+  </g>
+  <script>
+    <![CDATA[
+      
+        var mapToSvgRealWidthPercent = function (percent) {
+          var realWidth = 2560;
+          var totalWidth = 2640;
+          if(realWidth === totalWidth){
+            return percent;
+          }
+          var width = 512;
+          var space = 20;
+          var realWidthValue = realWidth * percent;
+          var index = Math.ceil( realWidthValue / width);
+          var valueWidth = realWidthValue + space * (index - 1);
+          return valueWidth / totalWidth;
+        }
+      
+      var svg = document.getElementById('5stars-svg');
+      var rect = document.getElementById('5stars-rect');
+      var percent = svg.getAttribute('data-width');
+      
+      var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+      if(MutationObserver) {
+        var observer = new MutationObserver(function(mutations) {
+          rect.style.width = mapToSvgRealWidthPercent(svg.dataset.width) * 100 + '%';
+        });
+        observer.observe(svg, {
+          attributes: true,
+          attributeOldValue: true,
+        });
+      }
+      
+      rect.style.width = mapToSvgRealWidthPercent(percent) * 100 + '%';
+    ]]>
+  </script>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "normal": "star-normal.svg",
+  "active": "star-active.svg",
+  "margin": 10,
+  "width": "auto",
+  "height": "auto",
+  "computeMargin": true,
+  "mode": "display",
+  "output": "output.svg"
+}

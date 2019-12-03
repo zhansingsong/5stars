@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>5stars click mode</title>
+</head>
+<body>
+  <script>
+      var maps = {
+        1: '<p>1 star</p>',
+        2: '<p>2 stars</p>',
+        3: '<p>3 stars</p>',
+        4: '<p>4 stars</p>',
+        5: '<p><span>5 stars</span><span style="color: red; margin-left: 10px">end click</span></p>',
+      }
+      window._5stars_click_cb_ = function (n) {
+        var info = document.querySelector('.info');
+        // end click operation when returning true
+        info.innerHTML = info.innerHTML + maps[n];
+        return n == 5;
+      }
+  </script>
+  <svg class="5stars-svg" id="5stars-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="100%"
+viewBox="0 0 269.335 53.867">
+  <!-- Generator: 5stars. https://github.com/zhansingsong/5stars -->
+  <defs>
+    <clipPath id="5stars-clip">
+    <rect x="0" y="0" width="0" height="53.867" fill="#000" id="5stars-rect"/>
+    </clipPath>
+  </defs>
+  <symbol viewbox="0 0 53.867 53.867" id="star-a"><path fill="#ddd" d="M26.934 1.318l8.322 16.864 18.611 2.705L40.4 34.013l3.179 18.536-16.645-8.751-16.646 8.751 3.179-18.536L0 20.887l18.611-2.705z"></path></symbol>
+  <symbol viewbox="0 0 53.867 53.867" id="star-b"><path fill="#ffad54" d="M26.934 1.318l8.322 16.864 18.611 2.705L40.4 34.013l3.179 18.536-16.645-8.751-16.646 8.751 3.179-18.536L0 20.887l18.611-2.705z"></path></symbol>
+  <g>
+    <use class="js-5stars-star" data-percent="0.2" data-n="1" xlink:href="#star-a" x="0" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.4" data-n="2" xlink:href="#star-a" x="53.867" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.6" data-n="3" xlink:href="#star-a" x="107.734" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.8" data-n="4" xlink:href="#star-a" x="161.601" y="0" width="53.867" /><use class="js-5stars-star" data-percent="1.0" data-n="5" xlink:href="#star-a" x="215.468" y="0" width="53.867" />
+  </g>
+  <g clip-path="url(#5stars-clip)">
+    <use class="js-5stars-star" data-percent="0.2" data-n="1" xlink:href="#star-b" x="0" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.4" data-n="2" xlink:href="#star-b" x="53.867" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.6" data-n="3" xlink:href="#star-b" x="107.734" y="0" width="53.867" /><use class="js-5stars-star" data-percent="0.8" data-n="4" xlink:href="#star-b" x="161.601" y="0" width="53.867" /><use class="js-5stars-star" data-percent="1.0" data-n="5" xlink:href="#star-b" x="215.468" y="0" width="53.867" />
+  </g>
+  <script>
+    <![CDATA[
+      
+        var mapToSvgRealWidthPercent = function (percent) {
+          var realWidth = 269.335;
+          var totalWidth = 269.335;
+          if(realWidth === totalWidth){
+            return percent;
+          }
+          var width = 53.867;
+          var space = 0;
+          var realWidthValue = realWidth * percent;
+          var index = Math.ceil( realWidthValue / width);
+          var valueWidth = realWidthValue + space * (index - 1);
+          return valueWidth / totalWidth;
+        }
+      
+      var svg = document.getElementById('5stars-svg');
+      var rect = document.getElementById('5stars-rect');
+      var percent = svg.getAttribute('data-width');
+      
+        var customStarCallback;
+        if(window && window._5stars_click_cb_ && typeof window._5stars_click_cb_ === 'function'){
+          customStarCallback = window._5stars_click_cb_;
+        }
+        var clickStarCallback = function(event){
+          var target = event.target;
+          var percent = target.getAttribute('data-percent');
+          var n = target.getAttribute('data-n');
+          if(percent){
+            rect.style.width = target.getAttribute('data-percent') * 100 + '%';
+            if(customStarCallback && customStarCallback(parseInt(n, 10))){
+              svg.removeEventListener('click', clickStarCallback, false);
+            }
+          }
+        }
+        svg.addEventListener('click', clickStarCallback, false);
+      
+      rect.style.width = mapToSvgRealWidthPercent(percent) * 100 + '%';
+    ]]>
+  </script>
+</svg>
+
+<h2 style="margin-bottom: 0">Console</h2>
+<pre class="info" style="padding-left: 4%; font-size: 2em; margin-top: 0"></pre>
+</body>
+</html>

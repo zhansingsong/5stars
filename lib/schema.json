@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "title": "5stars",
+  "properties": {
+    "normal": { "type": "string" },
+    "active": { "type": "string" },
+    "width": { "type": "string" },
+    "height": { "type": "string" },
+    "mode": { "type": "string" },
+    "output": { "type": "string" },
+    "space": { "type": "number" },
+    "computeSpace": { "type": "boolean" }
+  }
+}
