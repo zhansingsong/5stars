@@ -6,6 +6,8 @@
 
 [ENGLISH DOC](./README.md)
 
+[WHY](./docs/why.md)
+
 ## 特征
 
 - 支持 `display` 和 `click` 模式
